@@ -27,7 +27,7 @@ class SmartWebSocketV2(object):
     LITTLE_ENDIAN_BYTE_ORDER = "<"
     RESUBSCRIBE_FLAG = False
     # HB_THREAD_FLAG = True
-    MAX_RETRY_ATTEMPT = 1
+    MAX_RETRY_ATTEMPT = 0
 
     # Available Actions
     SUBSCRIBE_ACTION = 1
