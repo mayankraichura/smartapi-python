@@ -82,10 +82,12 @@ class SmartWebSocketV2(object):
             raise Exception("Provide valid value for all the tokens")
 
     def _sanity_check(self):
+        if self.auth_token is None or \
+                self.api_key is None or \
+                self.client_code is None or \
+                self.feed_token is None:
+            return False
         return True
-        # if self.auth_token is None or self.api_key is None or self.client_code is None or self.feed_token is None:
-        #     return False
-        # return True
 
     # def _on_message(self, wsapp, message):
     #     print("message--->", message)
@@ -372,7 +374,7 @@ class SmartWebSocketV2(object):
 
             i = 0
             while i < len(binary_packets):
-                packets.append(binary_packets[i: i+20])
+                packets.append(binary_packets[i: i + 20])
                 i += 20
             return packets
 
