@@ -96,7 +96,6 @@ class SmartWebSocketV2(object):
     #         self.on_message(wsapp, message)
 
     def _on_data(self, wsapp, data, data_type, continue_flag):
-
         if data_type == 2:
             parsed_message = self._parse_binary_data(data)
             self.on_data(wsapp, parsed_message)
@@ -354,9 +353,10 @@ class SmartWebSocketV2(object):
     def _parse_token_value(binary_packet):
         token = ""
         for i in range(len(binary_packet)):
-            if binary_packet[i] == b'\x00':
+            packet = binary_packet[i]
+            if packet == 0:
                 return token
-            token += binary_packet[i].encode("UTF-8")
+            token += chr(packet)
         return token
 
     def _parse_best_5_buy_and_sell_data(self, binary_data):
