@@ -259,9 +259,15 @@ class SmartWebSocketV2(object):
                 "x-client-code": self.client_code,
                 "x-feed-token": self.feed_token
             }
-            self.wsapp = websocket.WebSocketApp(self.ROOT_URI, header=headers, on_open=self._on_open,
-                                                on_error=self._on_error, on_close=self._on_close, on_data=self._on_data,
-                                                on_ping=self._on_ping, on_pong=self._on_pong)
+            self.wsapp = websocket.WebSocketApp(self.ROOT_URI,
+                                                header=headers,
+                                                on_open=self._on_open,
+                                                on_error=self._on_error,
+                                                on_close=self._on_close,
+                                                on_data=self._on_data,
+                                                on_ping=self._on_ping,
+                                                on_pong=self._on_pong
+                                                )
             self.wsapp.run_forever(sslopt={"cert_reqs": ssl.CERT_NONE}, ping_interval=self.HEAR_BEAT_INTERVAL,
                                    ping_payload=self.HEART_BEAT_MESSAGE)
         except Exception as e:
@@ -296,7 +302,7 @@ class SmartWebSocketV2(object):
             self.current_retry_attempt += 1
             self.connect()
 
-    def _on_close(self, wsapp):
+    def _on_close(self, wsapp, code, reason):
         # self.HB_THREAD_FLAG = False
         # print(self.wsapp.close_frame)
         self.on_close(wsapp)
