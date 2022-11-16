@@ -305,7 +305,7 @@ class SmartWebSocketV2(object):
     def _on_close(self, wsapp, code, reason):
         # self.HB_THREAD_FLAG = False
         # print(self.wsapp.close_frame)
-        self.on_close(self, wsapp, code, reason)
+        self.on_close(wsapp, code, reason)
 
     def _parse_binary_data(self, binary_data):
         try:
