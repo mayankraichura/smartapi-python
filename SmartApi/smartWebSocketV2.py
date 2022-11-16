@@ -304,6 +304,8 @@ class SmartWebSocketV2(object):
             self.current_retry_attempt += 1
             self.connect()
 
+        self.on_error(wsapp,error)
+
     def _on_close(self, wsapp, code, reason):
         # self.HB_THREAD_FLAG = False
         # print(self.wsapp.close_frame)
