@@ -5,7 +5,7 @@ Created on Wed May 26 18:50:44 2021
 @author: Sandip.Khairnar
 """
 
-from smartapiwebsocket import SmartWebSocket
+from MsrSmartApi.smartApiWebsocket import SmartWebSocket
 
 # feed_token=092017047
 FEED_TOKEN="092017047"

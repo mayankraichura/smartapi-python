@@ -1,4 +1,4 @@
-__title__ = "smartapi-python"
+__title__ = "msr_smartapi_python"
 __description__ = "Angel Broking openApi integration"
 __url__ = "https://www.angelbroking.com/"
 __download_url__ = "https://github.com/angelbroking-github/smartapi-python"

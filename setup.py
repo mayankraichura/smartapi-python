@@ -12,7 +12,7 @@ requirements = [
     ]
 
 setup(
-    name="SmartApi",
+    name="msr_smartapi_python",
     version="1.3.8",
     author="ab-smartapi",
     author_email="smartapi.sdk@gmail.com",
@@ -20,7 +20,7 @@ setup(
     long_description=readme,
     long_description_content_type="text/markdown",
     url="https://github.com/angelbroking-github/smartapi-python",
-    packages=["SmartApi"],
+    packages=["MsrSmartApi"],
     install_requires=requirements,
     classifiers=[
         "Development Status :: 5 - Production/Stable",
