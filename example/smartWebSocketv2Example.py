@@ -6,7 +6,7 @@
     :copyright: (c) 2022 by Angel One Limited
 """
 
-from MsrSmartApi.smartWebSocketV2 import SmartWebSocketV2
+from SmartApi.smartWebSocketV2 import SmartWebSocketV2
 
 AUTH_TOKEN = 'Bearer eyJhbGciOiJIUzU-w'
 API_KEY = 'qwert'

@@ -1,18 +1,15 @@
-from six.moves.urllib.parse import urljoin
-import sys
-import csv
 import json
-import dateutil.parser
-import hashlib
 import logging
-import datetime
-import MsrSmartApi.smartExceptions as ex
+import re
+import socket
+import uuid
+
 import requests
 from requests import get
-import re, uuid
-import socket
-import platform
-from MsrSmartApi.version import __version__, __title__
+from six.moves.urllib.parse import urljoin
+
+import SmartApi.smartExceptions as ex
+from SmartApi.version import __version__, __title__
 
 log = logging.getLogger(__name__)
 

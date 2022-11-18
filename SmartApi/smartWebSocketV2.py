@@ -7,11 +7,11 @@
 """
 from __future__ import print_function
 
-import struct
+import json
 # import threading
 # import time
 import ssl
-import json
+import struct
 
 import websocket
 
@@ -304,7 +304,7 @@ class SmartWebSocketV2(object):
             self.current_retry_attempt += 1
             self.connect()
 
-        self.on_error(wsapp,error)
+        self.on_error(wsapp, error)
 
     def _on_close(self, wsapp, code, reason):
         # self.HB_THREAD_FLAG = False

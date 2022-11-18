@@ -1,5 +1,5 @@
 # package import statement
-from MsrSmartApi import SmartConnect #or from smartapi.smartConnect import SmartConnect
+from SmartApi import SmartConnect #or from smartapi.smartConnect import SmartConnect
 #import smartapi.smartExceptions(for smartExceptions)
 
 #create object of call
