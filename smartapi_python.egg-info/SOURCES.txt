@@ -1,5 +1,12 @@
 README.md
 setup.py
+SmartApi/__init__.py
+SmartApi/smartApiWebsocket.py
+SmartApi/smartConnect.py
+SmartApi/smartExceptions.py
+SmartApi/smartWebSocketV2.py
+SmartApi/version.py
+SmartApi/webSocket.py
 smartapi/__init__.py
 smartapi/smartApiWebsocket.py
 smartapi/smartConnect.py
